@@ -1,8 +1,12 @@
 # Student Dropout Prediction Using Logistic Regression
 
-A end-to-end Machine Learning project that predicts whether a student is likely to drop out or remain enrolled/graduate after their second academic period.
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://student-dropout-prediction-uew3jvqm4nlhhqbdgzfkxe.streamlit.app/)
 
-The project covers the entire ML lifecycle: exploratory data analysis (EDA), preprocessing, training a **Logistic Regression** pipeline, interpreting model coefficients, and deploying a local interactive web interface built with **Streamlit**.
+> 🚀 **Live Demo:** Try the interactive web application directly in your browser without any installation: **[Launch Student Dropout Prediction App](https://student-dropout-prediction-uew3jvqm4nlhhqbdgzfkxe.streamlit.app/)**
+
+An end-to-end Machine Learning project that predicts whether a student is likely to drop out or remain enrolled/graduate after their second academic period.
+
+The project covers the entire ML lifecycle: exploratory data analysis (EDA), preprocessing, training a **Logistic Regression** pipeline, interpreting model coefficients, and deploying an interactive web interface built with **Streamlit**.
 
 
 ## 🎯 Project Overview & Objectives
@@ -10,7 +14,7 @@ The project covers the entire ML lifecycle: exploratory data analysis (EDA), pre
 * **Predictive Modeling:** Train a balanced binary classification model to identify students at risk of academic dropout.
 * **Model Interpretability:** Analyze model coefficients to understand which academic, financial, and demographic factors influence predictions.
 * **End-to-End Pipeline:** Demonstrate a modular machine learning workflow separating raw data, exploratory analysis, cleaning, training, and inference.
-* **Deployment:** Provide an accessible, user-friendly Streamlit web application for real-time inference and probability estimation.
+* **Deployment:** Provide an accessible, user-friendly Streamlit web application (hosted on Streamlit Community Cloud) for real-time inference and probability estimation.
 
 
 ## 📊 Dataset & Target Variable
@@ -24,24 +28,25 @@ The original dataset is available from:
 - [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success)
 - [Kaggle](https://www.kaggle.com/datasets/thedevastator/higher-education-predictors-of-student-retention)
 
-The raw dataset is **not included in this repository**. To reproduce
-the exploratory analysis and preprocessing steps, download the dataset
-and place the CSV file at:
+The raw dataset is **not included in this repository**. To reproduce the exploratory analysis and preprocessing steps, download the dataset and place the CSV file at:
 
 ```text
 data/
 └── raw/
     └── dataset.csv
 
+```
 
 To focus specifically on early risk detection, the original 3-class target was transformed into a binary outcome:
+
 ### Target Transformation
 
-| Original Class | Target Mapping | Binary Class | Description                           |
-|-----------------|-----------------|--------------|----------------------------------------|
-| **Dropout**     | `1`             | **At Risk**  | Student left the academic institution |
-| **Enrolled**    | `0`             | **Retained** | Student remains active in the system  |
-| **Graduate**    | `0`             | **Retained** | Student completed their degree        |
+| Original Class | Target Mapping | Binary Class | Description |
+| --- | --- | --- | --- |
+| **Dropout** | `1` | **At Risk** | Student left the academic institution |
+| **Enrolled** | `0` | **Retained** | Student remains active in the system |
+| **Graduate** | `0` | **Retained** | Student completed their degree |
+
 ---
 
 ## 🏗️ Project Architecture
@@ -107,9 +112,11 @@ LogisticRegressionCV(
 
 ---
 
-## 🚀 Quick Start & Installation
+## 🚀 Quick Start & Local Installation
 
-### Prerequisities
+If you prefer to run the project locally instead of using the [live web app](https://student-dropout-prediction-uew3jvqm4nlhhqbdgzfkxe.streamlit.app/):
+
+### Prerequisites
 
 * Python 3.9+
 * `pip` package manager
@@ -169,15 +176,15 @@ The Streamlit web app allows users to input individual student details (age, gra
 * **Data Handling:** Pandas, NumPy
 * **Machine Learning:** Scikit-learn
 * **Data Visualization:** Matplotlib, Seaborn
-* **Interface:** Streamlit
+* **Interface & Deployment:** Streamlit, Streamlit Community Cloud
 * **Environment:** Jupyter Notebooks, Git
 
 ---
 
 ## 📚 Citation
 
-Realinho, V., Vieira Martins, M., Machado, J., & Baptista, L. (2021). 
-*Predict Students' Dropout and Academic Success* [Dataset]. 
+Realinho, V., Vieira Martins, M., Machado, J., & Baptista, L. (2021).
+*Predict Students' Dropout and Academic Success* [Dataset].
 UCI Machine Learning Repository. https://doi.org/10.24432/C5MC89
 
 Licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.
